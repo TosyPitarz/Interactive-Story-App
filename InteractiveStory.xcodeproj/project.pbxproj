@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		843705071D2B30B500DFB903 /* InteractiveStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843705061D2B30B500DFB903 /* InteractiveStory.swift */; };
+		843705091D2B40CB00DFB903 /* PageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843705081D2B40CB00DFB903 /* PageController.swift */; };
 		CD3BA50A1C892F2B00B543B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3BA5091C892F2B00B543B6 /* AppDelegate.swift */; };
 		CD3BA50C1C892F2B00B543B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3BA50B1C892F2B00B543B6 /* ViewController.swift */; };
 		CD3BA50F1C892F2B00B543B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3BA50D1C892F2B00B543B6 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		843705061D2B30B500DFB903 /* InteractiveStory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveStory.swift; sourceTree = "<group>"; };
+		843705081D2B40CB00DFB903 /* PageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageController.swift; sourceTree = "<group>"; };
 		CD3BA5061C892F2B00B543B6 /* InteractiveStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InteractiveStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3BA5091C892F2B00B543B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD3BA50B1C892F2B00B543B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				CD3BA5121C892F2B00B543B6 /* LaunchScreen.storyboard */,
 				CD3BA5151C892F2B00B543B6 /* Info.plist */,
 				843705061D2B30B500DFB903 /* InteractiveStory.swift */,
+				843705081D2B40CB00DFB903 /* PageController.swift */,
 			);
 			path = InteractiveStory;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843705091D2B40CB00DFB903 /* PageController.swift in Sources */,
 				843705071D2B30B500DFB903 /* InteractiveStory.swift in Sources */,
 				CD3BA50C1C892F2B00B543B6 /* ViewController.swift in Sources */,
 				CD3BA50A1C892F2B00B543B6 /* AppDelegate.swift in Sources */,
