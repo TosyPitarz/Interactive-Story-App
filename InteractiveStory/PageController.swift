@@ -36,6 +36,36 @@ class PageController: UIViewController {
         {
             //print(page.story.text)
             artwork.image = page.story.artwork
+            //storyLabel.text = page.story.text
+            let attributedString = NSMutableAttributedString(string: page.story.text)
+            
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.lineSpacing = 10
+            
+            attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, attributedString.length))
+            
+            //display attributed string using the label
+            storyLabel.attributedText = attributedString
+            
+            
+            if let firstChoice = page.firstChoice
+            {
+                firstChoiceButton.setTitle(firstChoice.title, forState: .Normal)
+            }
+            else
+            {
+                firstChoiceButton.setTitle("Play Again", forState: .Normal)
+            }
+            
+            
+            if let secondChoice = page.firstChoice
+            {
+                secondChoiceButton.setTitle(secondChoice.title, forState: .Normal)
+            }
+            
+
+            
+            
         }
     }
 
@@ -55,8 +85,33 @@ class PageController: UIViewController {
             artwork.rightAnchor.constraintEqualToAnchor(view.rightAnchor),
             artwork.leftAnchor.constraintEqualToAnchor(view.leftAnchor)])
         
+        view.addSubview(storyLabel)
+        storyLabel.translatesAutoresizingMaskIntoConstraints = false
+        storyLabel.numberOfLines = 0
         
         
+        //middle of the view with some spacing in the view 
+        NSLayoutConstraint.activateConstraints([
+            storyLabel.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor, constant: 16.0),//pin to the leading anchor
+            storyLabel.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor, constant: -16.0),
+            storyLabel.topAnchor.constraintEqualToAnchor(view.centerYAnchor, constant: -48.0),
+            
+            ])
+        
+        
+        view.addSubview(firstChoiceButton)
+        firstChoiceButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activateConstraints([
+            firstChoiceButton.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor),
+            firstChoiceButton.bottomAnchor.constraintEqualToAnchor(view.bottomAnchor, constant: -80.0)
+            ])
+        
+        view.addSubview(secondChoiceButton)
+        secondChoiceButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activateConstraints([
+            secondChoiceButton.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor),
+            secondChoiceButton.bottomAnchor.constraintEqualToAnchor(view.bottomAnchor, constant: -32)
+            ])
         
     }
 
