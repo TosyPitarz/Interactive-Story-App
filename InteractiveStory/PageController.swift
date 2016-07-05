@@ -66,7 +66,6 @@ class PageController: UIViewController {
                 secondChoiceButton.addTarget(self, action: #selector(PageController.loadSecondChoice), forControlEvents: .TouchUpInside)
             }
             
-        
             
         }
     }
